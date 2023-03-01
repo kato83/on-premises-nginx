@@ -14,6 +14,7 @@ services:
       - nginx
       - nextcloud
       - pleroma
+      - drupal
     ports:
       - 80:80
       - 443:443
@@ -27,4 +28,7 @@ networks:
     external: true
   pleroma:
     name: pleroma
+    external: true
+  drupal:
+    name: drupal
     external: true
