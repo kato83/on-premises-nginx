@@ -12,6 +12,8 @@ services:
       - /root/ssl/letsencrypt/archive:/etc/nginx/ssl/archive
     networks:
       - nginx
+      - nextcloud
+      - pleroma
     ports:
       - 80:80
       - 443:443
@@ -20,3 +22,9 @@ networks:
   nginx:
     internal: true
     name: nginx
+  nextcloud:
+    name: nextcloud
+    external: true
+  pleroma:
+    name: pleroma
+    external: true
